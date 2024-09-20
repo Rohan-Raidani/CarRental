@@ -1,0 +1,72 @@
+.card-section{
+    text-align: center;
+    margin-top: 2rem;
+}
+.card-section h3{
+   color: var(--second-color);
+}
+
+.card-section h2{
+  color: var(--btn-color);
+}
+
+.card-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin:3rem 0;
+    font-family: var(--main-font);
+   
+}
+
+.card-content img{
+    width: 28rem;
+    object-fit: cover;
+    
+}
+.all-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    border: 1px solid rgb(228, 220, 220);
+}
+.all-cards h2 ,h3{
+    color: var(--btn-color);
+    font-family: var(--main-font);
+}
+
+.car-details{
+    display: flex;
+    justify-content: space-around;
+    font-family: var(--second-font);
+}
+.btns{
+    margin-bottom: 10px;
+}
+.btn-1{
+    width: 45%;
+    height: 2rem;
+    background-color: var(--btn-color);
+    border: none;
+    cursor: pointer;
+    font-family: var(--second-font);
+}
+.btn-1:hover{
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+
+.btn-2{
+    width: 45%;
+    height: 2rem;
+    background-color:  var(--second-color);
+    border: none;
+    cursor: pointer;
+    font-family: var(--second-font);
+}
+.btn-2:hover{
+    background-color: var(--main-color);
+    color: var(--white-color);
+}

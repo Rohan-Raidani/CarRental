@@ -1,0 +1,60 @@
+.expert_card{
+    height: 100%;
+    width: 20rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.307);
+    border-left: 1px solid rgba(0, 0, 0, 0.307);
+    border-right: 1px solid rgba(0, 0, 0, 0.307);
+
+    border-radius: 5px;
+}
+
+.expert_card .main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.expert_card .img{
+    height: 70.5%;
+    width: 100.6%;
+    position: relative;
+    /* overflow: hidden; */
+}
+.expert_card .img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.expert_card .img .up{
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    background-color: #fbb34e00;
+    top: -203px;
+    transition: 0.5s ease;
+    border-radius: 5px;
+}
+.expert_card .img:hover .up{
+    top: 0px;
+    background-color:#fbb34e97;
+}
+.expert_card .img .up span{
+    background-color: var(--main-color);
+    padding: 5px 10px;
+    border-radius: 50%;
+    color: var(--white-color);
+    visibility: hidden;
+    transition:  1.5 ease;
+}
+.expert_card .img .up:hover span{
+    visibility: visible;
+}

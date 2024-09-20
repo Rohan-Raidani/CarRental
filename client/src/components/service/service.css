@@ -1,0 +1,51 @@
+.service-main{
+    text-align: center;
+    font-family: var(--main-font);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    gap: 1rem;
+    /* color: var(--btn-color); */
+}
+.service-heading{
+    font-family: var(--main-font);
+    text-align: center;
+}
+
+.service-heading h4{
+    color: var(--second-color);
+    font-size: 1.5rem;
+    
+}
+.service-heading h1{
+    color: var(--btn-color);
+}
+
+.service-main h4{
+    font-weight: bold;
+}
+.service-section{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin: auto;
+    align-items: self-start;
+    gap: 1.3rem;
+    width: 25rem;
+   
+}
+.service-section h4{
+    color: var(--btn-color);
+    font-weight: bolder;
+    font-size: large;
+    
+}
+.service-section h4:hover{
+ color: var(--main-color);
+
+}
+
+.service-section .location a{
+    font-size: 2.5rem;
+    color: var(--main-color);
+}

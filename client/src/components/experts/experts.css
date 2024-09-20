@@ -1,0 +1,13 @@
+.experts{
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    padding: 35px 20px;
+    align-items: center;
+}
+.experts h2{
+    font-size: 2rem;
+}
+.experts .slider-container{
+    width: 70rem;
+}

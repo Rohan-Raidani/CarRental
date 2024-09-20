@@ -1,0 +1,47 @@
+.testimonial-head{
+    text-align: center;
+}
+
+.slider-cantner{
+   display: flex;
+   flex-direction: column;
+   margin-top: 50px;
+   height:15rem;
+   width: 80rem;
+   margin: auto;
+   
+}
+.slider-container h3 {
+    color: var(--second-color);
+}
+.slider-container h2{
+    color: var(--btn-color);
+}
+.review-content{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 15px;
+}
+.review-content img{
+    object-fit: cover;
+    width: 5rem;
+    border-radius: 5px;
+}
+
+.testimonial-section{
+    width: 0;
+    margin-top: 1.5rem;
+}
+.review-section{
+    width: 25rem;
+    text-align: start;
+}
+
+.cust h4{
+    font-family: var(--main-font);
+    color: var(--btn-color);
+}
+.cust h6{
+    font-family: var(--second-font);
+}

@@ -1,0 +1,65 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+.footer .top{
+    position: relative;
+    height: 85%;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+}
+.footer .top .head{
+    font-size: 25px;
+}
+.footer .top .info, .quick-links, .address{
+    width: 33.4%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.footer .top .info{
+    padding: 10px;
+    padding-left: 100px;
+
+}
+.footer .bottom{
+    color:rgba(247, 247, 247, 0.663) ;
+    font-size: small;
+}
+.footer .top::after{
+    position: absolute;
+    content: "";
+    background-color: rgba(247, 247, 247, 0.375);
+    height: 2px;
+    width: 70%;
+    /* width: 3800%; */
+    top: 90%;
+    /* transform: translate(-50%); */
+}
+.footer .top .quick-links{
+    padding-left: 140px;
+}
+.footer .top .quick-links .links{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* transition: 0.5s ease; */
+}
+.footer .top .quick-links .links p{
+    transition: 0.5s ease;
+    color: var(--white-color);
+
+}
+
+.footer .top .quick-links .links p:hover{
+    color: var(--second-color);
+    cursor: pointer;
+}
