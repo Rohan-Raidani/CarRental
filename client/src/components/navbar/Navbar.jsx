@@ -6,12 +6,22 @@ const Navbar = () => {
 
   const location = useLocation();
 
-  const navItems = [
+  const adminItems = [
+    {name:"Admin", path:"/admin"},  
+    {name:"Car", path:"/admin/car"},  
+    {name:"Driver", path:"/admin/driver"},  
+    {name:"Request", path:"/admin/request"}, 
+  ]
+
+  const homeItems = [
     {name:"Home", path:"/"},
     {name:"About", path:"/about"},
     {name:"Contact", path:"/contact"},
     {name:"Facilities", path:"/facilities"},
+    
   ] 
+
+  const navItems = location.pathname.startsWith('/admin') ? adminItems : homeItems;
   return (
 <div className="navbar">
 <nav>

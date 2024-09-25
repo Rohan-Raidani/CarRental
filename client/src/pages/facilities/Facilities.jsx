@@ -3,8 +3,7 @@ import Card from '../../components/card/Card'
 
 const Facilities = () => {
   return (
-     <><Card/>
-     </>
+    <Card/>
   )
 }
 
