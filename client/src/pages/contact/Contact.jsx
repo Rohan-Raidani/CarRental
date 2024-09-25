@@ -4,13 +4,16 @@ import { FiTwitter, FiFacebook, FiInstagram,FiLinkedin } from "react-icons/fi";
 import emailjs from "emailjs-com"
 
 const Contact = () => {
+
+  const key = import.meta.env.VITE_PRIVATE_KEY
+  // console.log(key);
   
   const [message, setmessage] =  useState('')
 
   const form = useRef();
 
   useEffect(() => {
-    emailjs.init("VnKGuGhqV-MCD7wps");
+    emailjs.init(key);
   }, []);
 
   function sendEmail(e){
