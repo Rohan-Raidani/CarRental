@@ -1,10 +1,12 @@
-import React,{useState,useEffect} from 'react'
+import {useState,useEffect} from 'react'
 import './card.css'
-import {cards} from '../../../public/assets/card'
+// import {cards} from '../../../public/assets/card'
 import {Link} from 'react-router-dom'
 import { FaCar } from "react-icons/fa";
 import { IoSettingsOutline } from "react-icons/io5";
 import { RiTimerFlashLine } from "react-icons/ri";
+import Rent from './Rent';
+import Modal1 from './Modal1';
 
 import {getCar} from '../../services/api'
 
@@ -14,6 +16,11 @@ const Card = () => {
   const [cars, setCars] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [rent , setRent] = useState(false);
+
+  const handleRent =()=>{
+        setRent(true);
+  }
 
   useEffect(() => {
     const fetchCars = async () => {
@@ -54,8 +61,10 @@ const Card = () => {
                     <p><RiTimerFlashLine/>{car.mileage} km/L</p>
                   </div>
                   <div className="btns">
-                    <Link><button className='btn-1'>Rent</button></Link>
-                    <Link><button className='btn-2'>Details</button></Link>
+                    <Link><button className='btn-1' onClick={handleRent} >Rent</button></Link>
+                    <Modal1 isOpen={rent} onClose={() => setRent(false)}>
+                       <Rent onclose={() => setRent(false)}/>
+                    </Modal1>
                     </div>
                 </div>
               ))

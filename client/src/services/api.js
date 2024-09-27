@@ -25,6 +25,17 @@ export const addDriver = async (driverData) => {
     }
 }
 
+// add Hire
+export const addHire = async (hireData) => {
+    try {
+        const res = await axios.post(`${API_URL}/`,{hireData})
+        return res.data
+    } catch (e) {
+        console.log("Error adding car data" , e);
+        throw e;
+    }
+}
+
 // getting car
 export const getCar = async () => {
     try{

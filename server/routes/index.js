@@ -13,4 +13,9 @@ router.get('/about' , about_controller.about )
 router.get('/contact' , contact_controller.contact)
 router.get('/facilities' ,facility_controller.facility)
 
+
+router.post('/' ,home_controller.addhireRequest)
+// router.post('/' ,home_controller.addcarRequest)
+
+
 module.exports = router;

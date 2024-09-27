@@ -36,7 +36,7 @@
     font-size: larger;
     gap: 80px;
 }
-.abs .right button{
+.abs .right .btn{
     border: 0;
     background-color: var(--btn-color);
     padding: 10px;
@@ -46,7 +46,7 @@
     transition: 0.2s ease;
     font-size: large;
 }
-.abs .right button:hover{
+.abs .right .btn:hover{
     background-color: #fbb34e11;
     /* filter: blur(2px); */
 

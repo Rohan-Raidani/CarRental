@@ -1,9 +1,9 @@
 // Modal.jsx
 // import React from 'react';
 import { FaTimes } from 'react-icons/fa';
-import './modal.css'; // Add your modal styles here
+import './modal1.css'; // Add your modal styles here
 
-const Modal = ({ isOpen, onClose, children }) => {
+const Modal1 = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
   return (
@@ -18,4 +18,4 @@ const Modal = ({ isOpen, onClose, children }) => {
   );
 };
 
-export default Modal;
+export default Modal1;
