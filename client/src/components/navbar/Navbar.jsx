@@ -10,7 +10,8 @@ const Navbar = () => {
     {name:"Admin", path:"/admin"},  
     {name:"Car", path:"/admin/car"},  
     {name:"Driver", path:"/admin/driver"},  
-    {name:"Request", path:"/admin/request"}, 
+    {name:"JobRequests", path:"/admin/jobRequest"}, 
+    {name:"CarRequests", path:"/admin/carRequest"}, 
   ]
 
   const homeItems = [

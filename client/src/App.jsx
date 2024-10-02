@@ -11,7 +11,9 @@ import Facilities from './pages/facilities/Facilities'
 import Footer from './components/footer/Footer'
 import Car from './components/cars/Car'
 import Driver from './components/driver/Driver'
-import Request from './components/request/Request'
+// import Request from './components/request/Request'
+import CarRequests from './components/carRequests/CarRequests'
+import JobRequests from './components/jobRequests/JobRequests'
 
 import Admin from './pages/admin/Admin'
 
@@ -32,7 +34,8 @@ function App() {
       <Route path='/admin' element={<Admin/>}/>
       <Route path='/admin/car' element={<Car/>}/>
       <Route path='/admin/driver' element={<Driver/>}/>
-      <Route path='/admin/request' element={<Request/>}/>
+      <Route path='/admin/carRequest' element={<CarRequests/>}/>
+      <Route path='/admin/jobRequest' element={<JobRequests/>}/>
     </Routes>
     <Footer/>
     </Router>

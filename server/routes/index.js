@@ -8,14 +8,17 @@ const facility_controller = require('../controllers/facility_controller')
 
 console.log("index router loaded");
 
-router.get('/' ,home_controller.home)
+// router.get('/' ,home_controller.home)
 router.get('/about' , about_controller.about )
 router.get('/contact' , contact_controller.contact)
 router.get('/facilities' ,facility_controller.facility)
 
 
 router.post('/' ,home_controller.addhireRequest)
-// router.post('/' ,home_controller.addcarRequest)
+router.post('/rent' ,home_controller.addRentRequest)
+
+router.get('/rent' ,home_controller.getcarRequests)
+router.get('/' ,home_controller.getJobRequests)
 
 
 module.exports = router;

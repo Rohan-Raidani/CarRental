@@ -1,28 +1,28 @@
 .admin{
-    height: 86vh;
-    /* background-color: aqua; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  height: 86vh;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 .admin table {
-    border-collapse: collapse; /* Collapse borders for a cleaner look */
-    width: 90vw; /* Make it full width */
-  }
-  
-  .admin   th, td {
-    border: 1px solid #ccc; /* Add border to table cells */
-    padding: 8px; /* Add some padding */
-    vertical-align: middle; /* Align items vertically to the center */
-    width: 14.2857%; /* Equal width for 7 columns (100% / 7) */
-    text-align: center; /* Center text horizontally */
-  }
-  
-  .admin  th {
-    font-weight: bold; /* Make header text bold */
-    background-color: #f2f2f2; /* Optional: add a background color to header */
-  }
-  
-  
-  
+  border-collapse: collapse;
+  width: 90vw; 
+  table-layout: fixed; /* Add this */
+}
+
+.admin th, td {
+  border: 1px solid #ccc; 
+  padding: 8px; 
+  vertical-align: middle; 
+  text-align: center; 
+  box-sizing: border-box; /* Add this */
+}
+
+.admin  th {
+  font-weight: bold; /* Make header text bold */
+  background-color: #f2f2f2; /* Optional: add a background color to header */
+}
+
+

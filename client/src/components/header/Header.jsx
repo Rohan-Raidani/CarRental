@@ -16,7 +16,7 @@ const Header = () => {
   let text = "Admin"
   if (location.pathname === "/" || location.pathname === "/about" || location.pathname === "/contact" || location.pathname === "/facilities") {
     text = "Admin"
-  }else if (location.pathname === "/admin" || location.pathname === "/admin/car" || location.pathname === "/admin/driver" || location.pathname === "/admin/request") {
+  }else if (location.pathname === "/admin" || location.pathname === "/admin/car" || location.pathname === "/admin/driver" || location.pathname === "/admin/carRequest" || location.pathname === "/admin/jobRequest") {
     text = "Home"
   }
 
@@ -24,7 +24,7 @@ const Header = () => {
     if (location.pathname === "/" || location.pathname === "/about" || location.pathname === "/contact" || location.pathname === "/facilities") {
       setIsModalOpen(true)
       // navigate('/admin')
-    }else if (location.pathname === "/admin" || location.pathname === "/admin/car" || location.pathname === "/admin/driver" || location.pathname === "/admin/request") {
+    }else if (location.pathname === "/admin" || location.pathname === "/admin/car" || location.pathname === "/admin/driver" || location.pathname === "/admin/carRequest" || location.pathname === "/admin/jobRequest") {
       navigate('/')
     }
   }

@@ -36,6 +36,41 @@ export const addHire = async (hireData) => {
     }
 }
 
+// adding Request
+export const addRequest = async (formData) => {
+    try {
+        const res = await axios.post(`${API_URL}/rent`,{formData})
+        return res.data
+    } catch (e) {
+        console.log("Error adding Request data" , e);
+        throw e;
+    }
+}
+
+// getting jobRequests
+// In your API service
+export const getJobRequests = async () => {
+  try {
+    const response = await axios.get(`${API_URL}/`);
+    return response.data; // Make sure this is an array
+  } catch (error) {
+    console.error("Error fetching job requests:", error);
+    throw error; // Rethrow to handle in the component
+  }
+};
+
+// get carRequests
+export const getCarRequests = async () => {
+    try {
+      const response = await axios.get(`${API_URL}/rent`);
+      return response.data; // Make sure this is an array
+    } catch (error) {
+      console.error("Error fetching car requests:", error);
+      throw error; // Rethrow to handle in the component
+    }
+  };
+
+
 // getting car
 export const getCar = async () => {
     try{

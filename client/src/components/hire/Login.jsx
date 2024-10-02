@@ -23,7 +23,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Handle form submission here (e.g., send data to server)
-    // setHireData(initialHireData)
+    setHireData(initialHireData)
     await addHire(hireData)
     console.log(hireData);
   };

@@ -1,12 +1,13 @@
 const mongoose = require('mongoose')
 
 const carRequestSchema = new mongoose.Schema({
-    name: String,
+    carId:String,
     contact: Number,
-    startDate: Date,
-    endDate: Date,
-    drivingLIcense: String,
+    drivingLicense: String,
     email: String,
+    endDate: Date,
+    name: String,
+    startDate: Date,
   },{collection:"carRequests"});
 
   const carRequest = mongoose.model('carRequest',carRequestSchema)
