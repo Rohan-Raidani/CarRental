@@ -20,5 +20,8 @@ router.post('/rent' ,home_controller.addRentRequest)
 router.get('/rent' ,home_controller.getcarRequests)
 router.get('/' ,home_controller.getJobRequests)
 
+router.delete('/rent/:id', home_controller.deleteCarRequest);
+router.delete('/:id', home_controller.deleteJobRequest);
+
 
 module.exports = router;

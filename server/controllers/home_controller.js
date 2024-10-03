@@ -1,6 +1,6 @@
 const Hire = require("../models/hireRequest");
 const CarReq = require("../models/carRequest");
-const Rent = require("../models/carRequest");
+// const Rent = require("../models/carRequest");
 
 module.exports.home = function(req,res) {
     return res.end('<p>Home </p>')
@@ -20,7 +20,7 @@ module.exports.addhireRequest = async (req, res) => {
     console.log("Received request body:", JSON.stringify(req.body, null, 2));
   
   if (req.body.formData) {
-    const newRent = new Rent(req.body.formData);
+    const newRent = new CarReq(req.body.formData);
     console.log("New rent object before save:", JSON.stringify(newRent, null, 2));
     try {
       const savedRent = await newRent.save();
@@ -35,17 +35,6 @@ module.exports.addhireRequest = async (req, res) => {
   }
   };
 
-
-
- module.exports.addcarRequest = async (req, res) => {
-    const newCarReq = new CarReq(req.body.carReqData);
-     try {
-         await newCarReq.save();
-         res.status(201).json({ message: 'Car added successfully' });
-     } catch (error) {
-         res.status(500).json({ message: 'Error adding car', error });
-     }
- };
 
  module.exports.getJobRequests = async (req,res) =>{
   try {
@@ -70,3 +59,35 @@ module.exports.getcarRequests = async (req,res) =>{
       res.status(500).json({ message: err.message });
   }
 }
+
+// New delete function for car requests
+module.exports.deleteCarRequest = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+      const result = await CarReq.findByIdAndDelete(id);
+      if (!result) {
+          return res.status(404).json({ message: 'Car request not found' });
+      }
+      res.status(200).json({ message: 'Car request deleted successfully' });
+  } catch (error) {
+      console.error('Error deleting car request:', error);
+      res.status(500).json({ message: 'Internal server error' });
+  }
+};
+
+// New delete function for job requests
+module.exports.deleteJobRequest = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+      const result = await Hire.findByIdAndDelete(id);
+      if (!result) {
+          return res.status(404).json({ message: 'Person request not found' });
+      }
+      res.status(200).json({ message: 'person request deleted successfully' });
+  } catch (error) {
+      console.error('Error deleting Person request:', error);
+      res.status(500).json({ message: 'Internal server error' });
+  }
+};

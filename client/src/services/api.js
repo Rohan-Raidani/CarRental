@@ -1,6 +1,8 @@
 import axios from 'axios'
 
-const API_URL = "http://localhost:8000"
+// const API_URL = "http://localhost:8000"
+// const API_URL = import.meta.env.VITE_API_URL
+const API_URL = "https://carrental-tefk.onrender.com"
 
 // Adding car
 
@@ -36,7 +38,7 @@ export const addHire = async (hireData) => {
     }
 }
 
-// adding Request
+// adding car Request
 export const addRequest = async (formData) => {
     try {
         const res = await axios.post(`${API_URL}/rent`,{formData})
@@ -47,8 +49,18 @@ export const addRequest = async (formData) => {
     }
 }
 
+// deleting car request
+export const deleteCarRequest = async (Id) => {
+    try {
+      const response = await axios.delete(`${API_URL}/rent/${Id}`);
+      return response.data;
+    } catch (error) {
+      console.error("Error deleting the car request:", error);
+      throw error;
+    }
+  };
+
 // getting jobRequests
-// In your API service
 export const getJobRequests = async () => {
   try {
     const response = await axios.get(`${API_URL}/`);
@@ -58,6 +70,17 @@ export const getJobRequests = async () => {
     throw error; // Rethrow to handle in the component
   }
 };
+
+// deleting job request
+export const deleteJobRequest = async (Id) => {
+    try {
+      const response = await axios.delete(`${API_URL}/${Id}`);
+      return response.data;
+    } catch (error) {
+      console.error("Error deleting the person request:", error);
+      throw error;
+    }
+  };
 
 // get carRequests
 export const getCarRequests = async () => {
