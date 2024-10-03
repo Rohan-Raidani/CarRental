@@ -37,7 +37,7 @@ const Contact = () => {
     <div className="contact">
       <div className="top-image"> 
         <div className="img"></div>
-        <h2 className="title">Contact Us</h2 >
+        <h2 className="title">Contact Us</h2>
       </div>
       <div className="contact-section">
         <form className="form" onSubmit={sendEmail} ref={form}>
