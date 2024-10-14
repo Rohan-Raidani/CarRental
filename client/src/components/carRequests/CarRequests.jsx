@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getCarRequests } from '../../services/api';
+import { getCarRequests,deleteCarRequest } from '../../services/api';
 
 const CarRequests = () => {
   const [carRequests, setCarRequests] = useState([]);
@@ -21,6 +21,23 @@ const CarRequests = () => {
   
     fetchCarRequests();
   }, []);
+
+  const handleDelete = async (Id) => {
+    if (window.confirm('Are you sure you want to delete this request?')) {
+      try {
+        await deleteCarRequest(Id);
+        // Remove the deleted request from the state
+        setCarRequests(carRequests.filter(request => request._id !== Id));
+      } catch (error) {
+        setError(error.message);
+      }
+    }
+  };
+
+  const handleCall = (contactNumber) => {
+    // Use a tel link to initiate a call
+    window.location.href = `tel:${contactNumber}`;
+  };
   
 
   if (loading) return <div>Loading...</div>;
@@ -56,8 +73,8 @@ const CarRequests = () => {
                   <td>{request.drivingLicense}</td>
                   <td>{request.email}</td>
                   <td>{request.carId}</td>
-                  <td><button type="button">Call</button></td>
-                  <td><button type="button">Delete</button></td>
+                  <td><button type="button" onClick={() => handleCall(request.contact)} >Call</button></td>
+                  <td><button type="button" onClick={() => handleDelete(request._id)} >Delete</button></td>
                 </tr>
               ))}
             </tbody>

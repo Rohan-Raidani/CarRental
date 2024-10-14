@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getJobRequests } from '../../services/api';
+import { getJobRequests,deleteJobRequest } from '../../services/api';
 
 const JobRequests = () => {
   const [jobRequests, setJobRequests] = useState([]);
@@ -21,6 +21,23 @@ const JobRequests = () => {
   
     fetchJobRequests();
   }, []);
+
+  const handleDelete = async (Id) => {
+    if (window.confirm('Are you sure you want to delete this request?')) {
+      try {
+        await deleteJobRequest(Id);
+        // Remove the deleted request from the state
+        setJobRequests(jobRequests.filter(request => request._id !== Id));
+      } catch (error) {
+        setError(error.message);
+      }
+    }
+  };
+
+  const handleCall = (contactNumber) => {
+    // Use a tel link to initiate a call
+    window.location.href = `tel:${contactNumber}`;
+  };
   
 
   if (loading) return <div>Loading...</div>;
@@ -50,8 +67,8 @@ const JobRequests = () => {
                   <td>{request.contact}</td>
                   <td>{request.email}</td>
                   <td>{request.licenseNumber}</td>
-                  <td><button type="button">Call</button></td>
-                  <td><button type="button">Delete</button></td>
+                  <td><button type="button" onClick={() => handleCall(request.contact)} >Call</button></td>
+                  <td><button type="button" onClick={() => handleDelete(request._id)} >Delete</button></td>
                 </tr>
               ))}
             </tbody>
