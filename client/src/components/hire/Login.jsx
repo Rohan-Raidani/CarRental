@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../login/login.css'
+import './login.css'
 
 import { addHire } from '../../services/api';
 

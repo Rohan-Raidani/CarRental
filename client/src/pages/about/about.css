@@ -6,7 +6,7 @@
 .top-image .img{
     height: 100%;
     /* background:linear-gradient(90deg, rgba(255,103,55,0.5579481792717087) 0%, rgba(251,179,78,0.5523459383753502) 100%), url('./images/drive.jpg'); */
-    background: url('./images/drive.jpg');
+    background: url('../../../public/images/drive.jpg');
     filter: blur(3px);
     overflow: hidden;
     background-position: center;

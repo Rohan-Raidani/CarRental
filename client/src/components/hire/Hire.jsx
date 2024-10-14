@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import './hire.css'
 import img from '/images/hire.png'
-import Login from './login';
+import Login from './Login';
 import Modal from '../modal/Modal';
 
 
