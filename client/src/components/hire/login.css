@@ -1,51 +1,88 @@
-/* login.css */
-.login-container  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .driver-form-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
-    /* height: 23rem; */
+/* Base styles */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px; /* Set a maximum width for better layout */
+  padding: 10px;
+  box-sizing: border-box; /* Include padding and borders in element's total width and height */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.driver-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.driver-form-container h2 {
+  color: var(--btn-color);
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin: 10px 0;
+  width: 100%; /* Ensure form group takes up the full width of the container */
+  max-width: 400px; /* Set a maximum width for better responsiveness */
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-align: left;
+  margin-bottom: 2px;
+  font-size: 1rem; /* Adjust font size for better readability */
+}
+
+input {
+  padding: 6px;
+  width: 100%;
+  /* box-sizing: border-box;  */
+  font-size: 1rem; /* Adjust font size for better readability */
+}
+
+ .driver-form-container form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px; /* Max width for better responsiveness */
+  margin-top: 20px;
+  display: block; /* Ensure block display */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .login-container {
+      padding: 20px 10px; /* Adjust padding for smaller screens */
   }
 
-  .driver-form-container .form-group{
-    display: flex;
-    flex-direction: column;
-    align-items: start ;
-
-  }
-
-  .driver-form-container h2{
-    color: var(--btn-color);
-  }
   .form-group {
-    margin: 10px 0;
-    width: 400px;
-  }
-  
-  .driver-form-container label {
-    text-align: left;
-    margin-bottom: 5px;
-  }
-  
-  .driver-form-container input {
-    padding: 8px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  button ,.driver-form-container form button {
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+      width: 100%;
+      padding: 0 10px; /* Add padding for better spacing */
   }
 
-  
+  button {
+      max-width: 100%; /* Ensure full width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+      padding: 15px 5px; /* Adjust padding for the smallest screens */
+  }
+
+  .form-group {
+      padding: 0 5px; /* Adjust padding for the smallest screens */
+  }
+
+  label, input, button {
+      font-size: 0.9rem; /* Adjust font size for better readability */
+  }
+}

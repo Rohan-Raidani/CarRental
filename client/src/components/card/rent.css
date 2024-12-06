@@ -1,17 +1,15 @@
 /* Base styles */
-.login-container {
+.driver-form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
- 
     padding: 20px;
     box-sizing: border-box; /* Include padding and borders in element's total width and height */
-    margin: 0 auto; /* Center the container horizontally */
 }
 
-.login-container h2 {
+.driver-form-container h2 {
     color: var(--btn-color);
     margin-bottom: 20px;
 }
@@ -19,24 +17,23 @@
 .form-group {
     margin: 10px 0;
     width: 100%;
+    max-width: 400px; /* Max width for better responsiveness */
     display: flex;
     flex-direction: column;
 }
 
 label {
     text-align: left;
-    margin-bottom: 5px;
-    font-size: 1rem; /* Adjust font size for better readability */
+    margin-bottom: 8px;
 }
 
 input {
     padding: 8px;
     width: 100%;
     box-sizing: border-box; /* Include padding and borders in element's total width and height */
-    font-size: 1rem; /* Adjust font size for better readability */
 }
 
-.login-container button {
+button {
     padding: 10px;
     background-color: #007bff;
     color: white;
@@ -44,18 +41,18 @@ input {
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
-    max-width: 200px; 
-    margin: 20px auto 0; /* Center the button */
-    display: block; /* Ensure block display */
+    max-width: 200px; /* Max width for better responsiveness */
+    margin-top: 20px;
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .login-container {
+    .driver-form-container {
         padding: 20px 10px; /* Adjust padding for smaller screens */
     }
 
     .form-group {
+        width: 100%;
         padding: 0 10px; /* Add padding for better spacing */
     }
 
@@ -65,12 +62,12 @@ input {
 }
 
 @media (max-width: 480px) {
-    .login-container {
-        padding: 15px 5px; /* Adjust padding for the smallest screens */
+    .driver-form-container {
+        padding: 12px 5px; /* Adjust padding for the smallest screens */
     }
 
     .form-group {
-        padding: 0 5px; /* Adjust padding for the smallest screens */
+        padding: 0 8px; /* Adjust padding for the smallest screens */
     }
 
     label, input, button {

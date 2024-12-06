@@ -1,5 +1,5 @@
 import React from 'react';
-import '../login/login.css';
+import '../card/rent.css';
 
 import { addRequest } from '../../services/api';
 

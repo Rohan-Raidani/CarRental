@@ -1,46 +1,144 @@
-/* hero.css */
-.slider-container {
-    /* position: relative; */
-    height: 40rem;
-    overflow: hidden;
-  }
- .slider-container .hero-section {
-    /* position: relative; */
-    height: 40rem;
-    width: 100%;
-    /* height: 100vh; */
-  }
-  
-  .hero-section img {
-    width: 100%;
-    /* height: 85vh; */
-    height: 100%;
-    object-fit: cover; 
-    
-  }
-  
-  .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color:var(--main-color);
-    font-family: var(--main-font);
-  }
-  
-  .hero-content h4,
-  .hero-content h1 {
-    font-size: 2.5rem;
-    padding: 10px;
+*{
+  margin: 0;
+  padding: 0;
+}
 
-  }
+/* Base styles */
+.slider-container {
+  position: relative;
+  height: 40rem;
+  width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  box-sizing: border-box; /* Include padding and borders in element's total width and height */
+}
+
+.slider-container .hero-section {
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: fit-content; /* Ensure it occupies the full height of the container */
+}
+
+.hero-section img {
+  width: 100%; /* Ensure image scales down with container */
+  height: 100%;  /*Ensure image scales down with container*/
+  object-fit: cover; /* Ensure the full image is shown within the container */
   
+}
+
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--main-color);
+  font-family: var(--main-font);
+  padding: 0 10px; /* Add some padding to ensure content doesn't overflow */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.hero-content h3,
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin: 10px 0; /* Adjust margin for spacing */
+}
+
+.hero-content button {
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .hero-content h3,
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
   .hero-content button {
-    padding: 10px 20px;
-    background-color: #ff6600;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+    padding: 8px 16px;
   }
-  
+}
+
+@media (max-width: 992px) {
+  .hero-content h3,
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content button {
+    padding: 7px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+    height: 30rem;
+  }
+
+  .slider-container .hero-section {
+    height: 30rem;
+  }
+
+  .hero-content h3,
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content button {
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .slider-container {
+    height: 25rem;
+  }
+
+  .slider-container .hero-section {
+    height: 25rem;
+  }
+
+  .hero-content {
+    padding: 0 5px; /* Add padding to avoid overflow */
+  }
+
+  .hero-content h3,
+  .hero-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero-content button {
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-container {
+    height: 20rem;
+  }
+
+  .slider-container .hero-section {
+    height: 20rem;
+  }
+
+  .hero-content {
+    top: 55%;
+    padding: 0 5px; /* Add padding to avoid overflow */
+  }
+
+  .hero-content h3,
+  .hero-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .hero-content button {
+    padding: 4px 8px;
+  }
+}

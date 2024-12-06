@@ -1,34 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 
-
-.header{
+/* Base styles */
+.header {
     width: 100%;
     height: 3rem;
-    padding: 5px 0;
+    padding: 4px 1rem;
     font-family: var(--main-font);
     display: flex;
-    justify-content: space-around    ;
+    justify-content: space-between; /* Distribute space between items */
     align-items: center;
-    /* gap: 4rem; */
-    background-color: var( --main-color);
+    background-color: var(--main-color);
     color: var(--white-color);
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    
 }
-.location{
+
+.location {
     display: flex;
     gap: 5px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
-.logo{
+
+.logo {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4px;
+    cursor: pointer;
 }
-.admin button{
-    width: 7rem;
+
+.name {
+    font-size: 1.5rem; /* Adjust the font size for better visibility */
+}
+
+.admin-button button {
+    width: 6rem;
     height: 2rem;
-    background-color: var( --btn-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--btn-color);
     color: var(--white-color);
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    margin: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto; /* Adjust height to fit content */
+        padding: 10px 0;
+    }
+
+    .logo, .location, .admin-button {
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        gap: 10px; /* Increase gap for better spacing */
+    }
+
+    .admin-button button {
+    
+        width: 100%;
+        max-width: 200px; /* Ensure button does not overflow */
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 1.2rem; /* Adjust the font size for smaller screens */
+    }
+
+    .location_content h4, .location_content h6 {
+        font-size: 0.9rem; /* Adjust font size for better readability */
+    }
+
+    .header {
+        padding: 10px; /* Add padding to prevent overflow */
+    }
+
+    .admin-button button {
+        padding: 10px 15px; /* Adjust padding for better fit on smaller screens */
+    }
 }

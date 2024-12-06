@@ -30,7 +30,7 @@ const Footer = () => {
         <div className="info">
           <div className="head"><FaCar/> NextCar
           </div>
-          <div className="description" style={{width:"400px", lineHeight:"30px"}}> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur qui nesciunt ex dolorum unde, ullam sequi voluptates nulla rerum! Iusto, id rerum. Praesentium, velit aut! Sint nisi earum pariatur? Adipisci! </div>
+          <div className="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur qui nesciunt ex dolorum unde, ullam sequi voluptates nulla rerum! Iusto, id rerum. Praesentium, velit aut! Sint nisi earum pariatur? Adipisci! </div>
         </div>
         <div className="quick-links">
           <div className="head">Quick Links</div>
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
         <div className="address">
           <div className="head">Head Office</div>
-          <p style={{width:"400px", lineHeight:"30px"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, autem. Atque ipsum dicta quas quod repellendus vel distinctio nihil sed.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, autem. Atque ipsum dicta quas quod repellendus vel distinctio nihil sed.</p>
         </div>
       </div>
       <div className="bottom">Build by Rahul Chaudhary and Rohan Raidani </div>

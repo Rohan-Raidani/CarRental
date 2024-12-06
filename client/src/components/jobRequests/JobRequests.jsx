@@ -49,7 +49,7 @@ const JobRequests = () => {
       <div className="addCar">
         <form className='table-container'>
           <table>
-            <thead>
+            {/* <thead>
               <tr>
                 <th style={{ width: "0%", padding: "0px" }}>Index</th>
                 <th>Name</th>
@@ -58,17 +58,17 @@ const JobRequests = () => {
                 <th>Driving License</th>
                 <th colSpan={2}>Action</th>
               </tr>
-            </thead>
+            </thead> */}
             <tbody>
               {jobRequests.map((request, index) => (
                 <tr key={request._id}>
-                  <td>{index + 1}</td>
-                  <td>{request.name}</td>
-                  <td>{request.contact}</td>
-                  <td>{request.email}</td>
-                  <td>{request.licenseNumber}</td>
-                  <td><button type="button" onClick={() => handleCall(request.contact)} >Call</button></td>
-                  <td><button type="button" onClick={() => handleDelete(request._id)} >Delete</button></td>
+                  <th>Index : {index + 1}</th>
+                  <th>Name : {request.name}</th>
+                  <th>Contact NO : {request.contact}</th>
+                  <th>Email : {request.email}</th>
+                  <th>Driving License : {request.licenseNumber}</th>
+                  <th><button type="button" onClick={() => handleCall(request.contact)} >Call</button></th>
+                  <th><button type="button" onClick={() => handleDelete(request._id)} >Delete</button></th>
                 </tr>
               ))}
             </tbody>

@@ -1,51 +1,118 @@
-.service-main{
+/* Base styles */
+.service-main {
     text-align: center;
     font-family: var(--main-font);
     display: flex;
     flex-wrap: wrap;
     margin-top: 4rem;
     gap: 1rem;
-    /* color: var(--btn-color); */
+    width: 100%; /* Ensure it takes up the full width */
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
-.service-heading{
+
+.service-heading {
     font-family: var(--main-font);
     text-align: center;
 }
 
-.service-heading h4{
+.service-heading h4 {
     color: var(--second-color);
     font-size: 1.5rem;
-    
 }
-.service-heading h1{
+
+.service-heading h1 {
     color: var(--btn-color);
 }
 
-.service-main h4{
+.service-main h4 {
     font-weight: bold;
 }
-.service-section{
+
+.service-section {
     display: flex;
     flex-direction: column;
     text-align: start;
     margin: auto;
-    align-items: self-start;
+    align-items: flex-start;
     gap: 1.3rem;
-    width: 25rem;
-   
+    width: 100%;
+    max-width: 25rem; /* Set a maximum width for better responsiveness */
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
 }
-.service-section h4{
+
+.service-section h4 {
     color: var(--btn-color);
     font-weight: bolder;
     font-size: large;
-    
-}
-.service-section h4:hover{
- color: var(--main-color);
-
+    cursor: pointer;
 }
 
-.service-section .location a{
+.service-section h4:hover {
+    color: var(--main-color);
+}
+
+.service-section .location a {
     font-size: 2.5rem;
     color: var(--main-color);
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .service-main {
+        justify-content: center;
+    }
+
+    .service-section {
+        max-width: 20rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-main {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem; /* Adjust padding to prevent overflow */
+    }
+
+    .service-section {
+        width: 90%;
+    }
+
+    .service-section h4 {
+        font-size: 1.5rem;
+    }
+
+    .service-section h6 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-heading h4 {
+        font-size: 1.2rem;
+    }
+
+    .service-heading h1 {
+        font-size: 2rem;
+    }
+
+    .service-section {
+        width: 100%;
+        padding: 0 10px; /* Add padding to prevent overflow */
+        box-sizing: border-box;
+    }
+
+    .service-section h4 {
+        font-size: 1.2rem;
+    }
+
+    .service-section h6 {
+        font-size: 0.9rem;
+    }
+
+    .service-section .location a {
+        font-size: 2rem;
+    }
 }

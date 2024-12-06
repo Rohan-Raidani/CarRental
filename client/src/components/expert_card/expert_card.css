@@ -1,35 +1,51 @@
-.expert_card{
-    height: 100%;
-    width: 20rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.307);
-    border-left: 1px solid rgba(0, 0, 0, 0.307);
-    border-right: 1px solid rgba(0, 0, 0, 0.307);
-
-    border-radius: 5px;
+*{
+   margin: 0;
+   padding: 0; 
 }
 
-.expert_card .main{
+/* Base styles */
+.expert_card {
+    height: 15rem;
+    width: 100%;
+    max-width: 20rem;
+    border: 1px solid rgba(0, 0, 0, 0.307);
+    border-radius: 5px;
+    overflow: hidden;
+    /* margin: 10px; */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for a professional look */
+    transition: transform 0.3s; /* Smooth transform transition */
+}
+
+.expert_card:hover {
+    transform: translateY(-8px); /* Lift the card on hover for effect */
+}
+
+.expert_card .main {
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    padding: 2px;
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
 }
-.expert_card .img{
-    height: 70.5%;
-    width: 100.6%;
+
+.expert_card .img {
+    width: 100%;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden; /* Hide overflow for better aesthetics */
+    border-radius: 5px;
 }
-.expert_card .img img{
-    height: 100%;
+
+.expert_card .img img {
     width: 100%;
     border-radius: 5px;
     cursor: pointer;
-
+    object-fit: contain; /* Ensure image covers the container */
 }
-.expert_card .img .up{
+
+.expert_card .img .up {
     cursor: pointer;
     height: 100%;
     width: 100%;
@@ -39,22 +55,67 @@
     gap: 15px;
     position: absolute;
     background-color: #fbb34e00;
-    top: -203px;
+    top: -100%; /* Start off-screen */
     transition: 0.5s ease;
     border-radius: 5px;
 }
-.expert_card .img:hover .up{
-    top: 0px;
-    background-color:#fbb34e97;
+
+.expert_card .img:hover .up {
+    top: 0;
+    background-color: #fbb34e97;
 }
-.expert_card .img .up span{
+
+.expert_card .img .up span {
     background-color: var(--main-color);
     padding: 5px 10px;
     border-radius: 50%;
     color: var(--white-color);
     visibility: hidden;
-    transition:  1.5 ease;
+    transition: visibility 0.5s, transform 0.5s; /* Smooth visibility and transform transition */
+    transform: translateY(20px); /* Start off-screen */
 }
-.expert_card .img .up:hover span{
+
+.expert_card .img .up:hover span {
     visibility: visible;
+    transform: translateY(0); /* Move into view */
+}
+
+.expert_card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.expert_card p:first-of-type {
+    color: #fbb34e;
+    font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .expert_card {
+        max-width: 18rem; /* Adjust max width for better responsiveness */
+    }
+/* 
+    .expert_card .main {
+        padding: 15px; 
+    } */
+
+    .expert_card p {
+        font-size: 0.9rem; /* Adjust font size for better readability */
+    }
+}
+
+@media (max-width: 576px) {
+    .expert_card {
+        max-width: 100%; /* Ensure full width for smaller screens */
+       
+    }
+
+    /* .expert_card .main {
+        padding: 10px; 
+    } */
+
+    .expert_card p {
+        font-size: 0.8rem; /* Adjust font size for better readability */
+    }
 }

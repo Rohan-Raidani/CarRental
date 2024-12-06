@@ -1,53 +1,156 @@
-.contact-section{
-    height: 30rem;
-     display: flex;
-    /*justify-content: center; */
-    /* gap: 20px; */
-}
-.contact-section .form, .info{
-    height: 100%;
+/* Base styles */
+.contact {
     display: flex;
-    padding-top: 100px;
-   
-}
-.contact-section .form{
-    width: 60%;
     flex-direction: column;
-    gap: 20px;
-    /* align-items: end; */
-    padding-left: 80px;
-    /* justify-content: end; */
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
-.contact-section .info{
-    width: 40%;
+.top-image {
+    height: 15rem;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
+}
+
+.top-image .img {
+    height: 100%;
+    width: 100%;
+    background: url('../../../public/images/drive.jpg');
+    filter: blur(3px);
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
-    flex-direction: column;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-image .title {
+    color: var(--white-color);
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column; /* Default to column for better responsiveness */
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.contact-section .form, .info {
+    width: 100%;
+    max-width: 600px; /* Max width for better responsiveness */
+    display: flex;
+    flex-direction: column; /* Column direction for better responsiveness */
+    align-items: center; /* Center align items */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
+}
+
+.contact-section .form {
     gap: 20px;
 }
-.contact-section .info p{
+
+.contact-section .info {
+    align-items: flex-start; /* Align items to the start */
+    gap: 10px;
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+.contact-section .info p {
     color: rgba(0, 0, 0, 0.327);
 }
-.contact-section .info .follow .icons{
+
+.contact-section .info .follow .icons {
     color: var(--second-color);
 }
-.contact-section .info .follow .icons:hover{
+
+.contact-section .info .follow .icons:hover {
     color: var(--main-color);
     cursor: pointer;
 }
-.contact-section .form .inp{
+
+.contact-section .form .inp {
     padding: 10px;
-    width: 70%;
+    width: 100%;
+    max-width: 400px; /* Max width for better responsiveness */
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.256);
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
 }
-.contact-section .form .btn{
-    width: 15%;
+
+.contact-section .form .btn {
+    width: 100%;
+    max-width: 200px; /* Max width for better responsiveness */
     border: none;
     border-radius: 5px;
     color: var(--white-color);
     background-color: var(--second-color);
     cursor: pointer;
     padding: 10px;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .contact-section {
+        flex-direction: row; /* Switch to row for larger screens */
+    }
+
+    .contact-section .form, .info {
+        flex-direction: column; /* Column direction for form and info */
+        align-items: flex-start; /* Align items to the start */
+        padding: 50px; /* Add padding for better spacing */
+    }
+
+    .contact-section .form {
+        width: 60%;
+    }
+
+    .contact-section .info {
+        width: 40%;
+        margin-top: 0; /* Remove top margin */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 20px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .contact-section .form, .info {
+        padding: 20px; /* Adjust padding for better spacing */
+    }
+
+    .contact-section .form .inp {
+        max-width: 100%; /* Ensure full width for smaller screens */
+    }
+
+    .contact-section .form .btn {
+        max-width: 100%; /* Ensure full width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 10px; /* Adjust padding for the smallest screens */
+    }
+
+    .top-image .title {
+        font-size: 1.5rem; /* Adjust font size for better readability */
+    }
+
+    .contact-section .form .inp, .contact-section .form .btn {
+        max-width: 100%; /* Ensure full width for smaller screens */
+    }
 }

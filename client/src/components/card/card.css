@@ -1,72 +1,138 @@
-.card-section{
+/* Base styles */
+.card-section {
     text-align: center;
     margin-top: 2rem;
-}
-.card-section h3{
-   color: var(--second-color);
+    padding: 0 1rem; /* Add padding to prevent overflow */
 }
 
-.card-section h2{
-  color: var(--btn-color);
+.card-section h3 {
+    color: var(--second-color);
 }
 
-.card-content{
+.card-section h2 {
+    color: var(--btn-color);
+}
+
+.card-content {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
     align-items: center;
-    margin:3rem 0;
+    margin: 3rem 0;
     font-family: var(--main-font);
-   
+    width: 100%; /* Ensure it takes up the full width */
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
-.card-content img{
-    width: 28rem;
-    object-fit: cover;
-    
+.card-content .all-cards .img img {
+    width: 100%;
+    height: auto; /* Ensure image maintains its aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
 }
-.all-cards{
+
+.all-cards {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
     border: 1px solid rgb(228, 220, 220);
+    width: 100%; /* Ensure it takes up the full width */
+    max-width: 28rem; /* Set a maximum width for better responsiveness */
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
 }
-.all-cards h2 ,h3{
+
+.all-cards h2,
+.all-cards h3 {
     color: var(--btn-color);
     font-family: var(--main-font);
 }
 
-.car-details{
+.car-details {
     display: flex;
     justify-content: space-around;
     font-family: var(--second-font);
 }
-.btns{
+
+.btns {
     margin-bottom: 10px;
 }
-.btn-1{
+
+.btn-1,
+.btn-2 {
     width: 45%;
     height: 2rem;
-    background-color: var(--btn-color);
     border: none;
     cursor: pointer;
     font-family: var(--second-font);
 }
-.btn-1:hover{
+
+.btn-1 {
+    background-color: var(--btn-color);
+}
+
+.btn-1:hover {
     background-color: var(--main-color);
     color: var(--white-color);
 }
 
-.btn-2{
-    width: 45%;
-    height: 2rem;
-    background-color:  var(--second-color);
-    border: none;
-    cursor: pointer;
-    font-family: var(--second-font);
+.btn-2 {
+    background-color: var(--second-color);
 }
-.btn-2:hover{
+
+.btn-2:hover {
     background-color: var(--main-color);
     color: var(--white-color);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .card-content {
+        padding: 0 1rem; /* Adjust padding to prevent overflow */
+    }
+
+    .all-cards {
+        max-width: 22rem; /* Adjust max width for better responsiveness */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem; /* Adjust padding to prevent overflow */
+    }
+
+    .all-cards {
+        width: 100%;
+        max-width: 100%; /* Ensure it takes up full width */
+    }
+
+    .car-details {
+        flex-direction: column; /* Adjust to column direction for better fit */
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-section {
+        padding: 0 0.5rem; /* Adjust padding for the smallest screens */
+    }
+
+    .all-cards {
+        width: 100%;
+        max-width: 100%; /* Ensure it takes up full width */
+        padding: 1rem; /* Add padding for better spacing */
+    }
+
+    .car-details {
+        gap: 0.5rem;
+        font-size: 0.9rem; /* Adjust font size for better readability */
+    }
+
+    .btn-1,
+    .btn-2 {
+        width: 100%; /* Ensure buttons take up full width */
+        padding: 0.5rem; /* Adjust padding for better fit */
+    }
 }

@@ -1,13 +1,69 @@
-.experts{
-    height: 30rem;
+/* Base styles */
+.experts {
     display: flex;
     flex-direction: column;
-    padding: 35px 20px;
+    padding: 30px 20px;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
-.experts h2{
+
+.experts h2 {
     font-size: 2rem;
 }
-.experts .slider-container{
-    width: 70rem;
+
+.experts .slider-container {
+    height: 20rem;
+    width: 100%;
+
+    max-width: 70rem;
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .experts {
+        padding: 25px 15px; /* Adjust padding for better responsiveness */
+    }
+
+    .experts h2 {
+        font-size: 1.8rem; /* Adjust font size for better readability */
+    }
+
+    .experts .slider-container {
+        max-width: 60rem; 
+    }
+}
+
+@media (max-width: 768px) {
+    .experts {
+        padding: 20px 10px; /* Adjust padding for better responsiveness */
+    }
+
+    .experts h2 {
+        font-size: 1.5rem; /* Adjust font size for better readability */
+    }
+
+    .experts .slider-container {
+        max-width: 40rem;
+    
+    }
+}
+
+@media (max-width: 576px) {
+    .experts {
+        padding: 15px 6px; /* Adjust padding for better responsiveness */
+    }
+
+    .experts h2 {
+        font-size: 1.2rem; /* Adjust font size for better readability */
+    }
+
+    .experts .slider-container {
+        max-width: 20rem;
+        margin-right: 10px; 
+    
+    }
+    
 }

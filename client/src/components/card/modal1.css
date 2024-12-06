@@ -1,35 +1,58 @@
-/* modal.css */
+/* Base styles */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.258);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.258);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: white;
+  color: black;
+  padding: 8px;
+  border-radius: 5px;
+  width: 90%; /* Adjust width to be responsive */
+  max-width: 450px; /* Set a maximum width for better responsiveness */
+  max-height: 90vh; /* Ensure modal doesn't exceed viewport height */
+  box-sizing: border-box; /* Include padding and borders in element's total width and height */
+ 
+}
+
+.close-button {
+ 
+  text-align: end;
+  color: black;
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .modal-content {
-    background-color: white;
-    color: black;
-    padding: 20px;
-    border-radius: 5px;
-    /* width: 450px; */
-    /* height: 35rem; */
-    position: relative;
+      padding: 15px; /* Adjust padding for smaller screens */
   }
-  
+
   .close-button {
-    position: absolute;
-    color: black;
-    top: 10px;
-    right: 10px;
-    border: none;
-    background: none;
-    font-size: 1.2rem;
-    cursor: pointer;
+      font-size: 1rem; /* Adjust close button size for smaller screens */
   }
-  
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+      width: 95%; /* Adjust width to be more responsive on very small screens */
+      padding: 4px; /* Reduce padding for better fit on smaller screens */
+      font-size: 0.9rem; /* Adjust font size for better readability */
+  }
+
+  .close-button {
+      font-size: 0.9rem; /* Adjust close button size for smaller screens */
+  }
+}

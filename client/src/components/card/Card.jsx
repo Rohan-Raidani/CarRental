@@ -56,7 +56,7 @@ const Card = () => {
       <div className="card-content">
         {cars.map((car) => (
           <div className="all-cards" key={car._id}>
-            <div className="img" style={{ width: "28rem", backgroundColor: "green", height: "15rem", overflow: "hidden" }}>
+            <div className="img" style={{ }}>
               <img src={`data:image/png;base64,${car.image}`} alt={car.name} style={{ height: "100%", width: "100%" }} />
             </div>
             <h2>{car.name}</h2>

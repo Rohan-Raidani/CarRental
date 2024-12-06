@@ -49,7 +49,7 @@ const CarRequests = () => {
       <div className="addCar">
         <form className='table-container'>
           <table>
-            <thead>
+            {/* <thead>
               <tr>
                 <th style={{ width: "0%", padding: "0px" }}>Index</th>
                 <th>Name</th>
@@ -61,20 +61,20 @@ const CarRequests = () => {
                 <th>car ID</th>
                 <th colSpan={2}>Action</th>
               </tr>
-            </thead>
+            </thead> */}
             <tbody>
               {carRequests.map((request, index) => (
                 <tr key={request._id}>
-                  <td>{index + 1}</td>
-                  <td>{request.name}</td>
-                  <td>{request.contact}</td>
-                  <td>{request.startDate}</td>
-                  <td>{request.endDate}</td>
-                  <td>{request.drivingLicense}</td>
-                  <td>{request.email}</td>
-                  <td>{request.carId}</td>
-                  <td><button type="button" onClick={() => handleCall(request.contact)} >Call</button></td>
-                  <td><button type="button" onClick={() => handleDelete(request._id)} >Delete</button></td>
+                  <th>Index : {index + 1}</th>
+                  <th>Name : {request.name}</th>
+                  <th>Contact : {request.contact}</th>
+                  <th>Start Date : {request.startDate}</th>
+                  <th>End Date : {request.endDate}</th>
+                  <th>Driving License : {request.drivingLicense}</th>
+                  <th>Email : {request.email}</th>
+                  <th>CarId: {request.carId}</th>
+                  <th><button type="button" onClick={() => handleCall(request.contact)} >Call</button></th>
+                  <th><button type="button" onClick={() => handleDelete(request._id)} >Delete</button></th>
                 </tr>
               ))}
             </tbody>

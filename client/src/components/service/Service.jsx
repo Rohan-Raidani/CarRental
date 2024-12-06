@@ -30,7 +30,7 @@ const Service = () => {
          <div className="location">
            <Link><FaCar/></Link>
          </div>
-         <h4>Unlimited Miles Car Rentalr</h4>
+         <h4>Unlimited Miles Car Rental</h4>
         <h6>Tempor tempor sadipscing vero lorem sea, invidunt sed et eos ipsum et erat. Dolor ut duo sadipscing lorem. Gubergren gub</h6>
     </div>
     <div className="service-section">

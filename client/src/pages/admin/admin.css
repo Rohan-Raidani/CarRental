@@ -1,28 +1,74 @@
-.admin{
-  height: 86vh;
-  /* background-color: aqua; */
+/* Base styles */
+.admin {
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding: 20px; /* Add padding for better spacing */
+  box-sizing: border-box;
 }
+
+.admin h1.title {
+  margin-bottom: 20px;
+}
+
+.admin h2 {
+  margin-bottom: 10px;
+}
+
 .admin table {
   border-collapse: collapse;
-  width: 90vw; 
-  table-layout: fixed; /* Add this */
+  width: 100%;
+  max-width: 90vw; /* Ensure the table fits within the viewport */
+  table-layout: fixed;
+  margin-bottom: 20px;
 }
 
-.admin th, td {
-  border: 1px solid #ccc; 
-  padding: 8px; 
-  vertical-align: middle; 
-  text-align: center; 
-  box-sizing: border-box; /* Add this */
+.admin th, .admin td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  vertical-align: middle;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-.admin  th {
-  font-weight: bold; /* Make header text bold */
-  background-color: #f2f2f2; /* Optional: add a background color to header */
+.admin th {
+  font-weight: bold;
+  background-color: #f2f2f2;
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+  .admin table {
+    width: 100%;
+  }
 
+  .admin th, .admin td {
+    padding: 6px;
+  }
+
+  .admin .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .admin .form input, .admin .form select, .admin .form button {
+    width: 100%;
+    max-width: 90%; /* Adjust to ensure full width on smaller screens */
+    margin-bottom: 10px; /* Add space between elements */
+  }
+
+  .admin table, .admin th, .admin td {
+    display: block; /* Display each cell as a block for stacking */
+    width: 100%;
+    text-align: left; /* Align text to the left for better readability */
+  }
+
+  .admin th {
+    text-align: left; /* Align text to the left */
+  }
+
+}
