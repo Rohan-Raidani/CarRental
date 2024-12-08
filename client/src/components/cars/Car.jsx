@@ -44,31 +44,36 @@ const Car = () => {
             <tbody>
               {cars.map((car, index) => (
                 <tr key={car._id}>
-                  <td>{index + 1}</td>
-                  <td data-label="">
-                    
+                  <td data-label="Index">{index + 1}</td>
+                  <td data-label="Image">
                     <img src={`data:image/png;base64,${car.image}`} alt={car.name} style={{ maxWidth: '200px', height: 'fit-content' }} />
                   </td>
-                  <td data-label="">
-                    <strong>Car Name:</strong> {car.name}
+                  <td data-label="Car Name : ">
+                    <strong></strong> {car.name}
                   </td>
-                  <td data-label="">
-                    <strong>Price:</strong> ${car.price}
+                  <td data-label="Price : ">
+                    <strong></strong> ${car.price}
                   </td>
-                  <td data-label="">
-                    <strong>Fuel Type:</strong> {car.fuelType}
+                  <td data-label="Fuel Type : ">
+                    <strong></strong> {car.fuelType}
                   </td>
-                  <td data-label="">
-                    <strong>Gear Type:</strong> {car.gearType}
+                  <td data-label="Gear Type : ">
+                    <strong></strong> {car.gearType}
                   </td>
-                  <td data-label="">
-                    <strong>Mileage:</strong> {car.mileage} km/L
+                  <td data-label="Mileage : ">
+                    <strong></strong> {car.mileage} km/L
                   </td>
-                  <td data-label="">
+                  <td data-label="Action  ">
                     <button type="button" onClick={() => handleDelete(car._id)}>Delete</button>
                   </td>
+                  <br />
+                  <br />
                 </tr>
+                
+
+                
               ))}
+              <br />
             </tbody>
           </table>
         </form>

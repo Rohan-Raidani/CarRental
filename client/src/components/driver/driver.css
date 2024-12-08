@@ -1,111 +1,115 @@
 /* Base styles */
 .car {
-    padding: 30px 0;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    gap: 20px;
-    align-items: center;
-  }
+  padding: 30px 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 20px;
+  align-items: center;
+}
+
+.car h1.title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center; /* Center the title */
+}
+
+.addCar {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center align the table container */
+}
+
+.table-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.car table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
   
-  .car h1.title {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
+}
+
+.car th, .car td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
   
-  .addCar {
-    width: 100%;
-  }
-  
-  .table-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow-x: auto;
-  }
-  
-  .car table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-  }
-  
+}
+
+.car th {
+  font-weight: bold;
+  background-color: #f2f2f2;
+}
+
+.car td img {
+  display: block;
+  margin: 0 auto; /* Center the images */
+}
+
+.car button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 auto; /* Center the button */
+  display: block;
+}
+
+.car button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .car th, .car td {
-    border: 1px solid #ccc;
-    padding: 12px;
+    display: block;
+    width: 100%;
     text-align: left;
-    vertical-align: top;
   }
-  
-  .car th {
+
+  .car th::before, .car td::before {
+    content: attr(data-label);
     font-weight: bold;
-    background-color: #f2f2f2;
+    display: inline-block;
+    width: 120px; /* Adjust width as needed */
   }
-  
-  .car td img {
-    display: block;
-    margin: 0 auto; /* Center the images */
+
+  .car td {
+    padding-left: 140px; /* Adjust padding as needed */
   }
-  
+
+  .car th, .car td {
+    padding: 8px;
+  }
+
   .car button {
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 0 auto; /* Center the button */
-    display: block;
+    width: 100%;
+    max-width: none;
   }
-  
-  .car button:hover {
-    background-color: #0056b3;
+}
+
+@media (max-width: 480px) {
+  .car th, .car td {
+    padding: 6px;
+    font-size: 1.4rem;
   }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .car th, .car td {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  
-    .car th::before {
-      content: attr(data-label);
-      font-weight: bold;
-      display: inline-block;
-      width: 120px; /* Adjust width as needed */
-    }
-  
-    .car td {
-      padding-left: 140px; /* Adjust padding as needed */
-    }
-  
-    .car th, .car td {
-      padding: 8px;
-    }
-  
-    .car button {
-      width: 100%;
-      max-width: none;
-    }
+
+  .car th::before, .car td::before {
+    width: 100px; /* Adjust width as needed */
   }
-  
-  @media (max-width: 480px) {
-    .car th, .car td {
-      padding: 6px;
-      font-size: 1.2rem;
-      text-align: center;
-    }
-  
-    .car th::before, .car td::before {
-      width: 100px; /* Adjust width as needed */
-    }
-  
-    .car td {
-      padding-left: 110px; /* Adjust padding as needed */
-    }
+
+  .car td {
+    padding-left: 135px; /* Adjust padding as needed */
+    text-align: center;
   }
-  
+}

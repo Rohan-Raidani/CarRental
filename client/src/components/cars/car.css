@@ -70,11 +70,12 @@
 
 @media (max-width: 480px) {
   .car th, .car td {
-    /* padding: 4px; */
+    padding: 4px;
     font-size: 1rem;
   }
 
   .car .table-container {
     padding: 0 5px;
+  
   }
 }

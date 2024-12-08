@@ -35,27 +35,25 @@ const Driver = () => {
 
   return (
     <div className="car">
-      <h1 className='title'>All Drivers</h1>
+      <h1 className="title">All Drivers</h1>
       <div className="addCar">
-        <form className='table-container'>
+        <form className="table-container">
           <table>
             <tbody>
               {drivers.map((driver, index) => (
                 <tr key={driver._id}>
-                  <th>{index + 1}</th>
-                  <th>
+                  <td data-label="Index : ">{index + 1}</td>
+                  <td data-label="Image : ">
                     <img src={`data:image/png;base64,${driver.image}`} alt={driver.contactNo} style={{ maxWidth: '100px', height: 'auto' }} />
-                  </th>
-                  <th>Contact No : {driver.contactNo}</th>
-                  <th>Address : {driver.address}</th>
-                  <th>
-                    Aadhar Card : <img src={`data:image/png;base64,${driver.aadharImage}`} alt={driver.contactNo} style={{ maxWidth: '100px', height: 'auto' }} />
-                  </th>
-                  <th>
-                    Driving License : <img src={`data:image/png;base64,${driver.drivingLicenseImage}`} alt={driver.contactNo} style={{ maxWidth: '100px', height: 'auto' }} />
-                  </th>
-                  <th>Car Assigned : {driver.carAssigned}</th>
-                  <th><button type="button" onClick={() => handleDelete(driver._id)}>Delete</button></th>
+                  </td>
+                  <td data-label="Contact No : "> {driver.contactNo}</td>
+                  <td data-label="Address : "> {driver.address}</td>
+                  <td data-label="Aadhar Card : "> <img src={`data:image/png;base64,${driver.aadharImage}`} alt={driver.contactNo} style={{ maxWidth: '100px', height: 'auto' }} /></td>
+                  <td data-label="Driving License :"> <br /><img src={`data:image/png;base64,${driver.drivingLicenseImage}`} alt={driver.contactNo} style={{ maxWidth: '100px', height: 'auto' }} /></td>
+                  <td data-label="Car Assigned :   "> <br />{driver.carAssigned}</td>
+                  <td data-label="Action "><button type="button" onClick={() => handleDelete(driver._id)}>Delete</button></td>
+                  <br />
+                  <br />
                 </tr>
               ))}
             </tbody>
