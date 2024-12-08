@@ -71,7 +71,7 @@
 @media (max-width: 480px) {
   .car th, .car td {
     padding: 4px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .car .table-container {
