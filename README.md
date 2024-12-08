@@ -1,76 +1,85 @@
-NextCar - Car Rental Platform (MERN Stack)
-NextCar is a car rental platform built using the MERN stack (MongoDB, Express, React, Node.js). It allows users to browse available cars, check rental details, and book vehicles with ease. This project is designed to solve the real-world problem of streamlining the car rental process through an intuitive web application.
+# **NextCar - Car Rental Platform (MERN Stack)**
 
-Features
-Browse Cars: Users can view available cars, including details like make, model, and rental rates.
-Booking System: Users can book cars for specific dates and times.
-Admin Panel: Admins can manage cars, bookings, and user details.
-Responsive Design: Optimized for mobile and desktop viewing.
-Tech Stack
-Frontend: React.js, HTML5, CSS3, Bootstrap
-Backend: Node.js, Express.js
-Database: MongoDB
-Authentication: JWT (JSON Web Tokens)
-State Management: Redux (optional, if used in your project)
-Deployment: Heroku/Netlify (or any other platform you used)
-Installation
-1. Clone the repository
-bash
-Copy code
+**NextCar** is a car rental platform built using the MERN stack (MongoDB, Express, React, Node.js). The platform allows users to browse available cars, check rental details, and easily book vehicles. The goal of this project is to streamline the car rental process and offer an intuitive, user-friendly web application.
+
+## **Features**
+- **Browse Cars**: Users can view a variety of available cars, including details like make, model, and rental rates.
+- **Booking System**: Users can select a car and book it for specific dates and times.
+- **Admin Panel**: Admins have the ability to manage cars, bookings, and user data.
+- **Responsive Design**: The platform is optimized for both mobile and desktop viewing.
+
+## **Tech Stack**
+- **Frontend**: 
+  - React.js 
+  - HTML5 
+  - CSS3 
+- **Backend**: 
+  - Node.js 
+  - Express.js
+- **Database**: MongoDB
+
+## **Prerequisites**
+- Node.js (v14.0.0 or later)
+- npm (v6.0.0 or later)
+- MongoDB
+
+## **Installation**
+### **1. Clone the Repository**
+```bash
 git clone https://github.com/your-username/NextCar.git
-2. Install Dependencies
-Backend (Server):
+cd NextCar
+```
 
-Navigate to the backend directory:
-
-bash
-Copy code
+### **2. Install Backend Dependencies**
+```bash
 cd backend
-Install backend dependencies:
-
-bash
-Copy code
 npm install
-Frontend (Client):
+```
 
-Navigate to the frontend directory:
-
-bash
-Copy code
-cd client
-Install frontend dependencies:
-
-bash
-Copy code
+### **3. Install Frontend Dependencies**
+```bash
+cd ../client
 npm install
-3. Set Up Environment Variables
-Create a .env file in the backend directory and configure the necessary environment variables. 
-Example:
-makefile
-Copy code
+```
+
+### **4. Set Up Environment Variables**
+Create a `.env` file in the `backend` directory with the following configurations:
+```plaintext
 PORT=5000
-MONGO_URI=your-mongodb-uri
-JWT_SECRET=your-jwt-secret
-4. Run the Project
-To run both the frontend and backend locally:
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+```
 
-Start Backend (Server):
-
-bash
-Copy code
+## **Running the Application**
+### **Start Backend Server**
+```bash
 cd backend
 npm start
-Start Frontend (Client):
+```
 
-bash
-Copy code
+### **Start Frontend Client**
+```bash
 cd client
 npm start
-5. Open in Browser
-Visit http://localhost:3000 for the frontend, and the backend will be running on http://localhost:5000.
+```
 
-Demo
-Live Demo: [[Insert demo link here]](https://car-rental-rust-mu.vercel.app/)
-Contributors
-Rahul Chaudhary
-Rohan Raidani
+## **Acknowledgements**
+- React.js
+- Node.js
+- Express.js
+- MongoDB
+- Bootstrap
+
+---
+
+## **Contributors**
+
+### **Rahul Chaudhary**
+[![Rahul Chaudhary](https://img.shields.io/badge/GitHub-Profile-blue?style=for-the-badge&logo=github)](https://github.com/rahulchaudhary15720)
+[![Follow on GitHub](https://img.shields.io/github/followers/rahulchaudhary15720?style=social)](https://github.com/rahulchaudhary15720)
+
+### **Rohan Raidani**
+[![Rohan Raidani](https://img.shields.io/badge/GitHub-Profile-blue?style=for-the-badge&logo=github)](https://github.com/Rohan-Raidani)
+[![Follow on GitHub](https://img.shields.io/github/followers/Rohan-Raidani?style=social)](https://github.com/Rohan-Raidani)
+
+**Happy Coding!** 🚀
