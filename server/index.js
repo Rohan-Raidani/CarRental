@@ -18,6 +18,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://car-rental-kohl-ten.vercel.app",
+      "https://car-rental-rust-mu.vercel.app",
       // Add any other domains you're using
     ],
     methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed methods
