@@ -1,32 +1,43 @@
-const dotenv = require('dotenv')
-dotenv.config()
+const dotenv = require("dotenv");
+dotenv.config();
 
-const express = require('express');
+const express = require("express");
 const app = express();
 
-const db = require('./config/user');
+const db = require("./config/user");
 // const Car = require('./models/car')
 
-const cors = require('cors');
-const bodyParser = require('body-parser');
+const cors = require("cors");
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000; // Default to 3000 if the port is not set
 
 // Middleware
-app.use(cors());
-// app.use(bodyParser.json());
-app.use(bodyParser.json({ limit: '10mb' })); // Adjust the limit as needed
-app.use(bodyParser.urlencoded({ limit: '10mb', extended: true })); // Also set for URL-encoded data
+app.use(
+  cors({
+    credentials: true,
+    origin: [
+      "http://localhost:5173",
+      "https://car-rental-kohl-ten.vercel.app",
+      // Add any other domains you're using
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed methods
+    allowedHeaders: ["Content-Type", "Authorization"], // Specify allowed headers
+  })
+);
 
+// Built-in Express body parsers (no need for body-parser package)
+app.use(express.json({ limit: "10mb" })); // JSON body parsing with a limit
+app.use(express.urlencoded({ limit: "10mb", extended: true })); // URL-encoded data with a limit
 
-app.use('/', require('./routes/index'))
-app.use('/admin',require('./routes/admin'))
+// Routes
+app.use("/", require("./routes/index"));
+app.use("/admin", require("./routes/admin"));
 
-app.listen(port , function(err){
-    if(err){
-        console.log(err);        
-    }else{
-        console.log(`server running on port: ${port}`);
-        
-    }
-})
+// Start server
+app.listen(port, function (err) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(`Server running on port: ${port}`);
+  }
+});
