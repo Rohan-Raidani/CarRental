@@ -94,7 +94,8 @@ const Admin = () => {
       <h1 className="title">Welcome Rahul</h1>
 
       <div className="addCar">
-        <h2>Add New Car</h2>
+        <h2>Add New Car</h2>  
+      
         <form className="form" onSubmit={handleSubmitCar}>
           <table>
             <thead>
