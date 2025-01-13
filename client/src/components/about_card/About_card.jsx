@@ -9,15 +9,15 @@ const About_card = () => {
       <div className="left">
         <h3 className='yellow'>About Us</h3>
         <h2 style={{color:"#4554a6"}}>Welcome to car rental service</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quos eveniet qui neque inventore impedit magnam suscipit maiores animi praesentium quas, sunt nemo molestiae quod quisquam maxime a unde obcaecati. Fuga voluptatibus beatae at tempore vero molestiae doloremque non dolorum.</p>
+        <p>At CarRental, we are committed to providing top-notch car rental services tailored to meet your unique needs. Based in the vibrant city of Jaipur, we take pride in offering a diverse fleet of well-maintained vehicles, ensuring a seamless and enjoyable rental experience for both locals and tourists alike.</p>
       <div className="list">
         <div className="l1">
-          <div className="i1"> <SiTicktick style={{color:"#fbb34e"}}/> <p> Lorem ipsum dolor sit</p> </div>
-          <div className="i2"> <SiTicktick style={{color:"#fbb34e"}}/> <p> Lorem ipsum dolor sit</p></div>
+          <div className="i1"> <SiTicktick style={{color:"#fbb34e"}}/> <p>Wide Range of Vehicles</p> </div>
+          <div className="i2"> <SiTicktick style={{color:"#fbb34e"}}/> <p> Professional Drivers</p></div>
         </div>
         <div className="l2">
-          <div className="i1"> <SiTicktick style={{color:"#fbb34e"}}/> <p> Lorem ipsum dolor sit</p></div>
-          <div className="i2"><SiTicktick style={{color:"#fbb34e"}}/>  <p> Lorem ipsum dolor sit</p></div>
+          <div className="i1"> <SiTicktick style={{color:"#fbb34e"}}/> <p> Customer-Centric Approach</p></div>
+          <div className="i2"><SiTicktick style={{color:"#fbb34e"}}/>  <p> 24/7 Support</p></div>
           </div>
       </div>
       </div>

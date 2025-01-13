@@ -47,9 +47,9 @@ const Experts = () => {
 
   return (
     <div className="experts">
-      <h3 style={{marginBottom:"10px", color:"#fbb34e"}}>Experts</h3>
-      <h2 style={{marginBottom:"50px", color:"#4554a6"}}>Our Members</h2>
-      <div style={{height:"60%"}}>
+      <h3 style={{color:"#fbb34e" , marginBottom:"10px"}}>Experts</h3>
+      <h2 style={{color:"#4554a6"}}>Our Members</h2>
+      <div>
         <div className="slider-container">
           <Slider {...settings}>
           {
@@ -65,4 +65,4 @@ const Experts = () => {
   )
 }
 
-export default Experts
+export default Experts;

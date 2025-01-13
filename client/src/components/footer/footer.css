@@ -124,6 +124,7 @@
 }
 
 @media (max-width: 576px) {
+    
     .footer .top .info .description,
     .footer .top .address p {
         width: 100%; /* Ensure full width for smaller screens */

@@ -5,13 +5,13 @@
 
 /* Base styles */
 .expert_card {
-    height: 15rem;
+    height: 18rem;
     width: 100%;
     max-width: 20rem;
     border: 1px solid rgba(0, 0, 0, 0.307);
     border-radius: 5px;
     overflow: hidden;
-    /* margin: 10px; */
+    margin-bottom: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for a professional look */
     transition: transform 0.3s; /* Smooth transform transition */
 }

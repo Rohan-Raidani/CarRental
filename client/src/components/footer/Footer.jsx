@@ -30,7 +30,7 @@ const Footer = () => {
         <div className="info">
           <div className="head"><FaCar/> NextCar
           </div>
-          <div className="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur qui nesciunt ex dolorum unde, ullam sequi voluptates nulla rerum! Iusto, id rerum. Praesentium, velit aut! Sint nisi earum pariatur? Adipisci! </div>
+          <div className="description">At NextCar, we offer a diverse range of well-maintained vehicles, from compact cars to luxury SUVs. Our professional drivers ensure your safety and comfort, whether you're heading into the city or catching a flight. With flexible booking options and 24/7 customer support, we make your travel experience smooth and hassle-free.</div>
         </div>
         <div className="quick-links">
           <div className="head">Quick Links</div>
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
         <div className="address">
           <div className="head">Head Office</div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, autem. Atque ipsum dicta quas quod repellendus vel distinctio nihil sed.</p>
+          <p>ManSarover , Jaipur ,Rajasthan </p>
         </div>
       </div>
       <div className="bottom">Build by Rahul Chaudhary and Rohan Raidani </div>

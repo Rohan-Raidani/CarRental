@@ -50,7 +50,7 @@ const Contact = () => {
         </form>
         <div className="info">
           <h3 style={{color:"#fbb34e", marginBottom:"10px"}}>Contact Information</h3>
-          <p>Lorem ipsum dolor sit amet consectetur.</p>
+          <p>NextCar team</p>
           <div className="phone" style={{display:"flex"}}><span style={{color:"#fbb34e"}}>Phone: &nbsp;</span> <p> +91-8745931586</p></div>
           <div className="email" style={{display:"flex"}}><span style={{color:"#fbb34e"}}>Email: &nbsp;</span> <p> jhon@gmail.com</p></div>
           <div className="follow"><span style={{display:"block", color:"#fbb34e", marginBottom:"15px"}}>Follow Us</span> <FiFacebook className='icons' /> &nbsp; <FiInstagram className='icons' />&nbsp; <FiLinkedin className='icons' /> &nbsp; <FiTwitter className='icons' /> </div>

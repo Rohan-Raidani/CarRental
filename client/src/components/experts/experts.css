@@ -2,7 +2,6 @@
 .experts {
     display: flex;
     flex-direction: column;
-    padding: 30px 20px;
     align-items: center;
     width: 100%;
     box-sizing: border-box; /* Include padding and borders in element's total width and height */
@@ -16,9 +15,9 @@
 .experts .slider-container {
     height: 20rem;
     width: 100%;
-
     max-width: 70rem;
     box-sizing: border-box; /* Include padding and borders in element's total width and height */
+    padding-bottom: 10px;
 }
 
 /* Responsive styles */
